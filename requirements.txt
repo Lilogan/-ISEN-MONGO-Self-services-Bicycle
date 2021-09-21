@@ -1,5 +1,3 @@
-Python package :
-- "pymongo[srv]"
-- python-dotenv
-
-the .env file with : url, user and password
+requests
+pymongo[srv]
+python-dotenv
