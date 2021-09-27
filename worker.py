@@ -52,10 +52,10 @@ def get_velostar(db):
     response_array = response_json.get('records', [])
     data = []
     for velostar_data in response_array:
-        data.append(live_data("Rennes-"+velostar_data["recordid"], velostar_data["fields"]["nom"], velostar_data["fields"]["nombrevelosdisponibles"],velostar_data["fields"]["nombreemplacementsactuels"]).__dict__)
+        data.append(live_data("Rennes-"+velostar_data["recordid"], velostar_data["fields"]["nom"], velostar_data["fields"]["nombrevelosdisponibles"],velostar_data["fields"]["nombreemplacementsdisponibles"]).__dict__)
     return data
 
-    
+
 def main():
     db = connectDB()
     while True:
