@@ -6,6 +6,8 @@ import requests
 import json
 from live_data import live_data
 from bson.son import SON
+
+
 load_dotenv()
 
 def connectDB():
@@ -22,5 +24,6 @@ def main():
     res = db["stations"].find({"pos": SON({"$near": { "$geometry": {"type": "Point", "coordinates": [float(latitude), float(longitude)]}}})})
     for a in res:
         print(a)
+
 if __name__ == "__main__":
     main()
